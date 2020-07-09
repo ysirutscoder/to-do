@@ -30,6 +30,7 @@ export class ModalComponent implements OnInit {
       descr: this.desc.nativeElement.value,
       date: this.date._datepickerInput._datepicker._datepickerInput._elementRef.nativeElement.value,
       priority: this.priority._elementRef.nativeElement.textContent,
+      editable: false,
     };
     this.taskWasEdit.emit(changedItem);
   }
