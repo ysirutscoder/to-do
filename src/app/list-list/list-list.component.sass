@@ -1,0 +1,140 @@
+@keyframes shake
+        10%, 90%
+                transform: translate3d(-1px, 0, 0)
+
+        20%, 80%
+                transform: translate3d(2px, 0, 0)
+
+        30%, 50%, 70%
+                transform: translate3d(-4px, 0, 0)
+
+        40%, 60%
+                transform: translate3d(4px, 0, 0)
+
+
+
+
+.lists-container
+    display: flex
+    flex-direction: row
+    background-color: beige
+    align-items: center
+    border: 2px solid lightcyan
+    flex-wrap: wrap
+    align-content: space-around
+    min-height: 100vh
+    &-title
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    &-list
+        width: 400px
+        padding: 0 50px
+        position: relative
+        background-color: #faf5e3
+        box-shadow: 0px 1px 2px 1px rgba(117,112,117,1)
+        border-radius: 10px
+        border: 2px solid #473f47
+        margin: 5px 20px
+        transition: 0.5s ease all
+        &:hover
+            box-shadow: 0px 5px 6px 4px rgba(117,112,117,1)
+        h2
+            text-align: center
+            color: #757075
+            text-transform: uppercase
+            padding: 10px 0
+
+        input
+            text-align: center
+            margin: 0 auto
+
+        svg.deleteList
+            position: absolute
+            top: 5px
+            right: 10px
+            &:hover
+                animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
+                transform: translate3d(0, 0, 0)
+                backface-visibility: hidden
+                perspective: 1000px
+    &-item
+        display : flex
+        flex-direction: column-reverse
+        background-color: floralwhite
+        border: 1px solid lightgray
+        border-radius: 10px
+        margin: 10px 5px
+        padding: 5px 10px
+        position: relative
+
+        svg.deleteItem
+            &:hover
+                    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
+                    transform: translate3d(0, 0, 0)
+                    backface-visibility: hidden
+                    perspective: 1000px
+        svg.editItem
+            position: absolute
+            bottom: 5px
+            right: 5px
+            &:hover
+                animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
+                transform: translate3d(0, 0, 0)
+                backface-visibility: hidden
+                perspective: 1000px
+        &-button
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-around
+            max-width: 150px
+            background-color: ghostwhite
+            color: slategrey
+            margin: 5px auto
+            border-radius: 10px
+            transform: scale(0.8)
+            transition: 0.5s ease all
+            &:hover
+                transform: scale(1.1)
+
+
+        &:hover
+            box-shadow: 0px 2px 2px 3px lightcoral
+    &-button
+        transition: 0.5s ease all
+        margin: 0 60px
+        width: 140px
+        height: 140px
+        display: flex
+        flex-direction: row
+        &:hover
+            transform: scale(1.2)
+
+app-list-item
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    padding: 20px 0
+    align-content: center
+
+
+
+
+
+
+
+.cdk-drag-preview
+    box-sizing: border-box
+    border-radius: 4px
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2)
+
+.cdk-drag-placeholder
+    opacity: 0
+
+
+.cdk-drag-animating
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1)
+
+

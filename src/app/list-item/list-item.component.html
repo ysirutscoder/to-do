@@ -1,0 +1,5 @@
+<div class="lists-container-item-name">{{item.taskname}}</div>
+<div [ngClass]="'lists-container-item-status--' + item.status.toLowerCase()">{{item.status}}</div>
+<div [ngClass]="'lists-container-item-priority--' + item.priority.toLowerCase()">{{item.priority}}</div>
+<div class="lists-container-item-description" *ngIf="isExtended">{{item.descr}}</div>
+<div class="lists-container-item-date">Due date:{{item.date}}</div>
