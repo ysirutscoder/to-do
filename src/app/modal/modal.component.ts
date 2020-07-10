@@ -11,10 +11,11 @@ import {MatDatepicker, MatSelect} from '@angular/material';
 export class ModalComponent implements OnInit {
   @ViewChild('inputName', {static: false}) name: ElementRef;
   @ViewChild('inputDesc', {static: false}) desc: ElementRef;
-  @ViewChild('picker', {static: false}) date: MatDatepicker;
+  @ViewChild('picker', {static: false}) date;
   @ViewChild('priority', {static: false}) priority: MatSelect;
   @ViewChild('status', {static: false}) status: MatSelect;
   @Output() taskWasEdit = new EventEmitter<Item>();
+  @Output() closeCurrentModal = new EventEmitter();
   @Input() editable;
   constructor() {
   }
@@ -33,6 +34,9 @@ export class ModalComponent implements OnInit {
       editable: false,
     };
     this.taskWasEdit.emit(changedItem);
+  }
+  closeModal() {
+    this.closeCurrentModal.emit();
   }
 
 }

@@ -1,1 +1,9 @@
-<p>list-filter works!</p>
+<div class="list-sort">
+    <mat-form-field appearance="fill">
+        <mat-label>Sort by</mat-label>
+        <mat-select #sortType (selectionChange)="handleSelectChange($event.value)">
+            <mat-option value="date">Due date</mat-option>
+            <mat-option value="priority">Priority</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>

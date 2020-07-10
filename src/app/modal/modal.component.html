@@ -1,5 +1,6 @@
 <div class="modal">
     <h3 >Edit Task</h3>
+    <div class="modal-close" (click)="closeModal()">x</div>
     <mat-form-field hintLabel="Max 10 characters" appearance="fill">
         <mat-label>Task name</mat-label>
         <input matInput #inputName maxlength="15" placeholder="Task name">
